@@ -4,7 +4,7 @@
 		margin: 0 $gutter-width/2;
 	}
 	@if not $fixedorfluid {
-		padding: 0 $gutter-width/2;
+		
 	}
 }
 
@@ -12,6 +12,10 @@
 	clear: both;
 	height: 100%;
 	overflow: hidden;
+}
+
+@mixin make-not-row {
+	clear: none;
 }
 
 @mixin make-columns($columns, $make-row) {
@@ -25,6 +29,9 @@
 	@include column-mixin;
 	@if $make-row {
 		@include make-row;
+	}
+	@if not $make-row {
+		@include make-not-row;
 	}
 }
 

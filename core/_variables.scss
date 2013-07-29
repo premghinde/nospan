@@ -15,10 +15,10 @@ $gutter-width: 8px;
 /* 
  * Definition of container references
  */
-$container: '.container';
+$container: '.wrapper';
 $header: 'header';
-$main: '.main';
-$sidebar: '.sidebar';
+$main: 'section';
+$sidebar: 'aside';
 $footer: 'footer';
 
 /* 
@@ -35,11 +35,12 @@ $footer_cols: 12;
 	#{$container} {
 		@if $fixedorfluid {
 			width: ($header_cols * $column-width) + (($header_cols - 1) * $gutter-width) + $gutter-width;
+			margin: auto;
 		} 
 		@if not $fixedorfluid {
-			width: 100%;
+			width: auto;
+			margin: 2em;
 		}
-		margin: auto;
 		@include make-row;
 	}
 
