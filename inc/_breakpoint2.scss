@@ -1,0 +1,10 @@
+$fixedorfluid: true;
+
+$header_cols: 14;
+$main_cols: 14;
+$sidebar_cols: 14;
+$footer_cols: 14;
+
+@media only screen and (max-width: 800px) {
+	@include generate_containers(true, true, true, true, true);
+}

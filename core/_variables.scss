@@ -1,0 +1,62 @@
+
+/* 
+ * Definition of layout style
+ * true = fixed widths (px)
+ * false = fluid widths (%)
+ */
+$fixedorfluid: false;
+
+/* 
+ * Definition of grid columns
+ */
+$column-width: 24px;
+$gutter-width: 8px;
+
+/* 
+ * Definition of container references
+ */
+$container: '.container';
+$header: 'header';
+$main: '.main';
+$sidebar: '.sidebar';
+$footer: 'footer';
+
+/* 
+ * Definition of grid column widths for containers
+ */
+$header_cols: 12;
+$main_cols: 9;
+$sidebar_cols: 3;
+$footer_cols: 12;
+
+
+@mixin generate_containers($container_row, $header_row, $main_row, $sidebar_row, $footer_row) {
+
+	#{$container} {
+		@if $fixedorfluid {
+			width: ($header_cols * $column-width) + (($header_cols - 1) * $gutter-width) + $gutter-width;
+		} 
+		@if not $fixedorfluid {
+			width: 100%;
+		}
+		margin: auto;
+		@include make-row;
+	}
+
+	#{$header} {
+		@include make-columns($header_cols, $header_row);
+	}
+
+	#{$main} {
+		@include make-columns($main_cols, $main_row);
+	}
+
+	#{$sidebar} {
+		@include make-columns($sidebar_cols, $sidebar_row);
+	}
+
+	#{$footer} {
+		@include make-columns($footer_cols, $footer_row);
+	}
+
+}

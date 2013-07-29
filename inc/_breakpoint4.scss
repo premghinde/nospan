@@ -1,0 +1,8 @@
+$header_cols: 31;
+$main_cols: 20;
+$sidebar_cols: 11;
+$footer_cols: 31;
+
+@media only screen and (min-width: 1025px) {
+	@include generate_containers(true, true, false, false, true);
+}

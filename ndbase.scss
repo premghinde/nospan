@@ -1,0 +1,19 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// This includes all of the foundation global elements that are needed to work with any of the other files.
+@import "core/variables";
+
+// Foundation Components
+@import
+  "inc/reset",
+  "inc/column",
+  "inc/style",
+  "inc/breakpointbase",
+  "inc/breakpoint1",
+  "inc/breakpoint2",
+  "inc/breakpoint3",
+  "inc/breakpoint4";
+
+
+

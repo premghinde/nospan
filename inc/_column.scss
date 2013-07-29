@@ -1,0 +1,30 @@
+@mixin column-mixin {
+	float: left;
+	@if $fixedorfluid {
+		margin: 0 $gutter-width/2;
+	}
+	@if not $fixedorfluid {
+		padding: 0 $gutter-width/2;
+	}
+}
+
+@mixin make-row {
+	clear: both;
+	height: 100%;
+	overflow: hidden;
+}
+
+@mixin make-columns($columns, $make-row) {
+	@if $fixedorfluid {
+		width: ($columns * $column-width) + (($columns - 1) * $gutter-width);
+	} 
+	@if not $fixedorfluid {
+		width: $columns / $header_cols * 100%;
+	}
+	
+	@include column-mixin;
+	@if $make-row {
+		@include make-row;
+	}
+}
+

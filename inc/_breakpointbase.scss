@@ -1,0 +1,9 @@
+$header_cols: 10;
+$main_cols: 10;
+$sidebar_cols: 10;
+$footer_cols: 10;
+
+
+
+@include generate_containers(true, true, true, true, true);
+
