@@ -11,8 +11,8 @@ $fixedorfluid: false;
  * Definition of grid columns - adjust these to your own grid requirements
  * - $column-width is in the inner width of the container
  * - $gutter-width if the magin given to the container for both sides in total
- * -- when $fixedorfluid is true, this will add up to give you your total width
- * -- when $fixedorfluid is true, this will be proportional based on the header columns
+ * -- when $fixedorfluid is true, this will multiplied to give you your total width based on columns defined
+ * -- when $fixedorfluid is false, this will be ignred and the result will be proportional based on the columns given to $header
  */
 
 $column-width: 24px;
