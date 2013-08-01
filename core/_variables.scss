@@ -4,17 +4,24 @@
  * true = fixed widths (px)
  * false = fluid widths (%)
  */
+
 $fixedorfluid: false;
 
 /* 
- * Definition of grid columns
+ * Definition of grid columns - adjust these to your own grid requirements
+ * - $column-width is in the inner width of the container
+ * - $gutter-width if the magin given to the container for both sides in total
+ * -- when $fixedorfluid is true, this will add up to give you your total width
+ * -- when $fixedorfluid is true, this will be proportional based on the header columns
  */
+
 $column-width: 24px;
 $gutter-width: 8px;
 
 /* 
  * Definition of container references
  */
+
 $container: '.wrapper';
 $header: 'header';
 $main: 'section';
@@ -24,11 +31,15 @@ $footer: 'footer';
 /* 
  * Definition of grid column widths for containers
  */
+
 $header_cols: 12;
 $main_cols: 9;
 $sidebar_cols: 3;
 $footer_cols: 12;
 
+/*
+ * Arguments passed in will define if the container is to be a row or not
+ */
 
 @mixin generate_containers($container_row, $header_row, $main_row, $sidebar_row, $footer_row) {
 
