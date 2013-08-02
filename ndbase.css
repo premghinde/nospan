@@ -8,8 +8,8 @@
  * Definition of grid columns - adjust these to your own grid requirements
  * - $column-width is in the inner width of the container
  * - $gutter-width if the magin given to the container for both sides in total
- * -- when $fixedorfluid is true, this will add up to give you your total width
- * -- when $fixedorfluid is true, this will be proportional based on the header columns
+ * -- when $fixedorfluid is true, this will multiplied to give you your total width based on columns defined
+ * -- when $fixedorfluid is false, this will be ignred and the result will be proportional based on the columns given to $header
  */
 /* 
  * Definition of container references
@@ -247,3 +247,47 @@ footer {
     clear: both;
     height: 100%;
     overflow: hidden; } }
+body {
+  font-size: 62.5%;
+  font-family: 'Open-sans', Helvetica, Arial, sans-serif;
+  color: #555; }
+
+.wrapper {
+  font-size: 1.4em;
+  line-height: 1.45em; }
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  margin: .75em 0; }
+header h2 {
+  font-size: 1.5em;
+  margin: 0 0 1em; }
+
+section h1 {
+  font-size: 1.6em;
+  font-weight: 900;
+  margin-bottom: 1em; }
+section h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-bottom: 1em; }
+section h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 1em; }
+section h4 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 1em; }
+section h5 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em; }
+section h6 {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-bottom: 1em; }
+
+header {
+  height: 180px; }

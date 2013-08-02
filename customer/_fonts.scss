@@ -1,0 +1,55 @@
+body {
+	font-size: 62.5%;
+	font-family: 'Open-sans', Helvetica, Arial, sans-serif;
+	color: #555;
+}
+
+#{$container} {
+	font-size: 1.4em;
+	line-height: 1.45em;
+}
+
+#{$header} {
+	h1 {
+		font-size: 2.5em;
+		font-weight: 900;
+		margin: .75em 0;
+	}
+	h2 {
+		font-size: 1.5em;
+		margin: 0 0 1em;
+	}
+}
+
+#{$main} {
+	h1 {
+		font-size: 1.6em;
+		font-weight: 900;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 1.5em;
+		font-weight: 800;
+		margin-bottom: 1em;
+	}
+	h3 {
+		font-size: 1.4em;
+		font-weight: 700;
+		margin-bottom: 1em;
+	}
+	h4 {
+		font-size: 1.3em;
+		font-weight: 600;
+		margin-bottom: 1em;
+	}
+	h5 {
+		font-size: 1.2em;
+		font-weight: 500;
+		margin-bottom: 1em;
+	}
+	h6 {
+		font-size: 1.1em;
+		font-weight: 400;
+		margin-bottom: 1em;
+	}
+}
